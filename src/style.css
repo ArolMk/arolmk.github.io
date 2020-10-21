@@ -1,9 +1,24 @@
 @import "nord.css";
 
-html, body {
+html {
+  height: 100%;
+}
+
+body {
   background-color: var(--nord0);
   color: var(--nord6);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  padding: 0;
+  margin: 0;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  align-content: space-between;
+  grid-template-areas: 
+    "header header header"
+    ". main ."
+    ". footer .";
 }
 
 h1 {
@@ -18,25 +33,14 @@ a {
 footer {
   color: var(--nord3);
   grid-area: footer;
+  text-align: center;
+  padding: 1rem;
 }
 
 footer a {
   color: var(--nord7);
-  text-align: center;
 }
 
 text {
   grid-area: main;
-}
-
-.container {
-  display: grid;
-  min-height: 100%;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto;
-  align-content: space-between;
-  grid-template-areas: 
-    "header header header"
-    ". main ."
-    ". footer .";
 }
