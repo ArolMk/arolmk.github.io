@@ -1,0 +1,7 @@
+@import "nord.css";
+
+body {
+  background-color: var(--nord6);
+  color: var(--nord0);
+  font-family: Helvetica, Arial, sans-serif;
+}
